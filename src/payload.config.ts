@@ -1,9 +1,9 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
-import sharp from 'sharp'
 import path from 'path'
 import { buildConfig, PayloadRequest } from 'payload'
+import sharp from 'sharp'
 import { fileURLToPath } from 'url'
-
+import { defaultLexical } from '@/fields/defaultLexical'
 import { Categories } from './collections/Categories'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
@@ -12,7 +12,6 @@ import { Users } from './collections/Users'
 import { Footer } from './Footer/config'
 import { Header } from './Header/config'
 import { plugins } from './plugins'
-import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 
 const filename = fileURLToPath(import.meta.url)

@@ -1,13 +1,13 @@
+import { ThemeProvider } from 'next-themes'
 import React from 'react'
 
 import { HeaderThemeProvider } from './HeaderTheme'
-import { ThemeProvider } from './Theme'
 
 export const Providers: React.FC<{
   children: React.ReactNode
 }> = ({ children }) => {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <HeaderThemeProvider>{children}</HeaderThemeProvider>
     </ThemeProvider>
   )
